@@ -292,6 +292,12 @@ img {
   font-size: 25px;
 }
 
+@media (max-width: 1250px) {
+  .logo__video {
+    transform: translateY(180px);
+  }
+}
+
 @media (max-width: 1000px) {
   .form {
     display: none;
@@ -299,10 +305,17 @@ img {
   .about {
     justify-content: center;
   }
+  .header {
+    margin-top: 150px;
+  }
+  .logo__video {
+    transform: translateY(25px);
+  }
 }
 
 @media (max-width: 768px) {
   .header {
+    margin-top: 30px;
     justify-content: center;
   }
   .logo {
@@ -348,6 +361,17 @@ img {
   }
   .about__me {
     margin-left: 10px;
+  }
+  .footer-social__item {
+    min-width: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .footer-telmail {
+    flex-direction: column;
+  }
+  .footer__text {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
