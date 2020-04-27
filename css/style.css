@@ -11,9 +11,12 @@ img {
   max-width: 100%;
 }
 
+.avatar {
+  width: 150px;
+}
+
 .header {
   margin-top: 220px;
-  background: url("../img/logo.jpg1") no-repeat center;
   height: 150px;
   max-width: 1170px;
   display: flex;
@@ -23,15 +26,14 @@ img {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0);
   max-width: 1100px;
   margin: auto;
-  height: 1500px;
 }
 
 .container__hero {
-  background: #ffffff;
+  background: #ffffff00;
   margin-top: 200px;
+  margin-bottom: 35px;
 }
 
 .logo {
@@ -45,10 +47,15 @@ img {
 .logo__video {
   position: fixed;
   z-index: -1;
+  transform: translateY(290px);
 }
 
 .logo__photo {
-  margin-top: 200px;
+  margin-top: 275px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  box-shadow: 5px 5px 50px #fff;
+  display: flex;
 }
 
 .logo__name {
@@ -71,9 +78,9 @@ img {
   min-height: 400px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border-radius: 5px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 225px;
   display: flex;
 }
 
@@ -100,7 +107,6 @@ img {
   background: #ffffff;
   border: 1px solid #c5c5c5;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
   border-radius: 5px;
   max-height: 368px;
   margin: auto;
@@ -132,7 +138,7 @@ img {
   font-size: 22px;
   line-height: 33px;
   color: #DDDDDD;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .form__button:hover {
@@ -151,6 +157,7 @@ img {
   height: 40px;
   font-size: 20px;
   padding-left: 34px;
+  outline: 0;
 }
 
 .form-input__phone {
@@ -161,6 +168,7 @@ img {
   font-size: 20px;
   padding-left: 34px;
   margin-top: 30px;
+  outline: 0;
 }
 
 .social {
@@ -195,7 +203,7 @@ img {
   min-height: 400px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border-radius: 5px;
   margin: auto;
   text-align: center;
   margin-top: 45px;
@@ -235,11 +243,53 @@ img {
 
 .item__image {
   max-width: 150px;
+  border: 1px solid #9c9c9c;
+  margin-bottom: 10px;
 }
 
 .item__link {
   text-decoration: none;
   color: #000000;
+}
+
+.footer {
+  margin-top: 30px;
+  max-width: 1100px;
+  min-height: 200px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social__item {
+  border-radius: 50%;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.footer-telmail {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-telmail__text {
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.welcome__text {
+  font-size: 25px;
 }
 
 @media (max-width: 1000px) {
