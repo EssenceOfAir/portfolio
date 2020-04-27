@@ -306,10 +306,10 @@ img {
     justify-content: center;
   }
   .header {
-    margin-top: 150px;
+    margin-top: 30px;
   }
   .logo__video {
-    transform: translateY(25px);
+    transform: translateY(150px);
   }
 }
 
@@ -346,6 +346,10 @@ img {
 }
 
 @media (max-width: 450px) {
+  .header {
+    margin-top: 0;
+    height: 75px;
+  }
   .logo {
     margin: 0;
   }
@@ -372,6 +376,15 @@ img {
   }
   .footer__text {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    height: 0;
+  }
+  .about {
+    margin-top: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
