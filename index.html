@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <script src=”//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js”></script>
   <title>Document</title>
 </head>
 <body>
@@ -66,12 +67,12 @@
           <!-- /.contacts -->
         </div>
         <!-- /.about__me -->
-        <form action="#" class="form">
+        <form action="mail.php" method="POST" id="form" class="form">
           <span class="form__title">Обратная связь</span>
           <!-- /.form__title -->
-          <input type="text" placeholder="Ваше имя" class="form-input__name">
-          <input type="text" placeholder="Ваш телефон" class="form-input__phone">
-          <button class="form__button">Перезвоните мне</button>
+          <input type="text" name="user_name" placeholder="Ваше имя" class="form-input__name">
+          <input type="text" name="user_phone" placeholder="Ваш телефон" class="form-input__phone">
+          <button type="submit" class="form__button">Перезвоните мне</button>
           <!-- /.form__button -->
         </form>
         <!-- /.form -->
@@ -163,5 +164,30 @@
   <!-- /.footer -->
 </div>
 <!-- /.container -->
+
+<script src="./js/main.js"></script>
+<script>
+  $(function () {
+    "use strict";
+    $("#form").on("submit", function (e) {
+      e.preventDefault();
+      var fd = new FormData(this);
+      $.ajax({
+        url: "send.php",
+        type: "POST",
+        contentType: false,
+        processData: false,
+        data: fd,
+        success: function (msg) {
+          if (msg == "ok") {
+        alert('Отправлено');
+      } else {
+        alert('Ошибка')
+      }
+    }
+ });
+ });
+});
+</script>
 </body>
 </html>
